@@ -12,6 +12,7 @@ interface State {
 export const toasts: State['toasts'] = writable([]);
 export const pausedAt: State['pausedAt'] = writable(null);
 
+
 const toastTimeouts = new Map<Toast['id'], ReturnType<typeof setTimeout>>();
 
 const addToRemoveQueue = (toastId: string) => {
